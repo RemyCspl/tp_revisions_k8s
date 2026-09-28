@@ -14,3 +14,8 @@
 
 2. La colonne 'READY 1/1' signifie que l'on a demandé la création d'un pod et que celui ci est bien actif
 La colonne 'RESTARTS 0' signifie qu'aucun redémarrage du pod n'a été constaté jusqu'à maintenant
+
+## Etape 3:
+1. Le pod a été recréé par le ReplicaSet du Deployment. Il compare le nombre de pods réels avec le nombre souhaité via les labels du selector, et recrée le manquant.
+
+2. Le passage à 3 replicas a été annulé parce que kubectl apply -f front-deployment.yaml réécrit l’état déclaré dans le manifest. Donc le cluster est revenu à la config du fichier, pas à l’action impérative. En équipe, il faut toujours garder les manifests comme source de vérité.
