@@ -26,5 +26,5 @@ La colonne 'RESTARTS 0' signifie qu'aucun redémarrage du pod n'a été constat�
 2. Les pods doivent appeler 'front' et non l'IP car les IP des pods changent, on utilse donc le nom du service pour que rester sur une configuration stable.
 
 
-J'ai décidé de ne pas poursuivre le TP puisque cela devient impossible à partir de la fin de la partie 4 étant donné que l'on nous demande de lire et d'appliquer des fichiers qui doivent être fournis, comme indiqué dans les consignes (cf image ci-dessous):
+J'ai décidé de ne pas poursuivre le TP puisque cela devient impossible à partir de la fin de la partie 4 étant donné que l'on nous demande de lire et d'appliquer des fichiers qui doivent être fournis, comme indiqué dans les consignes (cf image ci-dessous), et que nous n'avons pas assez d'informations pour réussir à créer ces fichiers nous-même:
 ![Consignes](./images/consignes.png)
