@@ -19,3 +19,8 @@ La colonne 'RESTARTS 0' signifie qu'aucun redémarrage du pod n'a été constat�
 1. Le pod a été recréé par le ReplicaSet du Deployment. Il compare le nombre de pods réels avec le nombre souhaité via les labels du selector, et recrée le manquant.
 
 2. Le passage à 3 replicas a été annulé parce que kubectl apply -f front-deployment.yaml réécrit l’état déclaré dans le manifest. Donc le cluster est revenu à la config du fichier, pas à l’action impérative. En équipe, il faut toujours garder les manifests comme source de vérité.
+
+## Etape 4:
+1. En changeant le selector du Service en app: vitrine les endpoints deviendraient alors vide, et le wget http://front ne fonctionnerai plus.
+
+2. Les pods doivent appeler 'front' et non l'IP car les IP des pods changent, on utilse donc le nom du service pour que rester sur une configuration stable.
